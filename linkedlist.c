@@ -202,6 +202,6 @@ LinkedList* LL_new(void) {
         perror("LL_new");
         return NULL;
     }
-    list->head == NULL;
+    list->head = NULL;
     return list;
 }

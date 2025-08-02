@@ -32,7 +32,7 @@ void LL_print(LinkedList* list);
 // Deallocates all of the nodes in the linkedlist
 void LL_deallocate(LinkedList* list);
 
-// Creates and allocates space for a linkedlist
+// Creates and allocates space for a lin
 LinkedList* LL_new(void);
 
 #endif
