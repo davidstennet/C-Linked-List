@@ -1,14 +1,9 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-typedef struct Node {
-    int data;
-    struct Node* nextNode;
-} Node;
+typedef struct Node Node;
 
-typedef struct {
-    Node* head;
-} LinkedList;
+typedef struct LinkedList LinkedList;
 
 // Inserts a node at the beginning of the linkedlist
 void LL_insertAtBegin(LinkedList* list, int data);
@@ -36,5 +31,8 @@ void LL_print(LinkedList* list);
 
 // Deallocates all of the nodes in the linkedlist
 void LL_deallocate(LinkedList* list);
+
+// Creates and allocates space for a linkedlist
+LinkedList* LL_new(void);
 
 #endif

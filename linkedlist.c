@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include "linkedlist.h"
 
+typedef struct Node {
+    int data;
+    struct Node* nextNode;
+} Node;
+
+typedef struct {
+    Node* head;
+} LinkedList;
+
 void LL_insertAtBegin(LinkedList* list, int data) {
     // Create the new node that will be inserted
     Node* newNode = malloc(sizeof(Node));
@@ -185,4 +194,14 @@ void LL_deallocate(LinkedList* list) {
         free(prevNode);
     }
     list->head = NULL;
+}
+
+LinkedList* LL_new(void) {
+    LinkedList* list = malloc(sizeof(LinkedList));
+    if (list == NULL) {
+        perror("LL_new");
+        return NULL;
+    }
+    list->head == NULL;
+    return list;
 }
